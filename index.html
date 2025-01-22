@@ -1,0 +1,110 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge 1</title>
+  </head>
+  <body>
+    <script>
+      console.log(`challenge 1`);
+      let width = 5;
+      let hight = 2;
+      let area = hight * width;
+      let show = "";
+      for (let i = 1; i <= area; i++) {
+        show += "*";
+        if (i % width == 0) {
+          show += "\n";
+        }
+      }
+      console.log(show);
+
+      console.log(`challenge 2`);
+      let array = [14, 15, 16, 20];
+      console.log(array);
+      let rev = array.reverse();
+      console.log(rev);
+
+      console.log(`challenge 3`);
+      let grade = [85, 90, 78, 92];
+      let sum = 0;
+      for (let j = 0; j < grade.length; j++) {
+        sum += grade[j];
+      }
+      let ave = sum / grade.length;
+      console.log(`The average score: ` + ave);
+
+      console.log(`challenge 4`);
+      let text = "hello world";
+      let char = "o";
+      let amount = 0;
+      console.log(text);
+      console.log(`input: ` + char);
+      for (let k = 0; k < text.length; k++) {
+        if (char == text[k]) {
+          amount++;
+        }
+      }
+      console.log(amount);
+
+      console.log(`challenge 5`);
+      let sen = "This is me";
+      let count = 0;
+      let check = true;
+      console.log(sen);
+      for (let l = 0; l < sen.length; l++) {
+        if (sen[l] != " ") {
+          if (check) {
+            count++;
+            check = false;
+          }
+        } else {
+          check = true;
+        }
+      }
+      console.log(`Word count: ` + count);
+
+      console.log(`challenge 6`);
+      let vote = ["A", "A", "B", "B", "C"];
+      let A = 0;
+      let B = 0;
+      let C = 0;
+
+      for (let i = 0; i < vote.length; i++) {
+        if (vote[i] == "A") {
+          A++;
+        } else if (vote[i] == "B") {
+          B++;
+        } else {
+          C++;
+        }
+      }
+
+      let findMax = Math.max(A, B, C);
+      let vic = [];
+
+      if (A == findMax) {
+        vic.push("A");
+      }
+      if (B == findMax) {
+        vic.push("B");
+      }
+      if (C == findMax) {
+        vic.push("C");
+      }
+
+      if (vote.length == 0) {
+        console.log(`There is no vote yet`);
+      }
+
+      if (vic.length == 1) {
+        console.log(vic + ` is the winner`);
+      } else if (vic.length == 2) {
+        console.log(vic.join(" and ") + ` are both winners`);
+      }
+    </script>
+  </body>
+</html>
